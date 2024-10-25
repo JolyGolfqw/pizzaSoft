@@ -1,0 +1,58 @@
+.form {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 100%;
+  // max-width: 600px; // Максимальная ширина формы
+  gap: 15px;
+
+  .form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  input[type="text"],
+  select {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 4px;
+    transition: border-color 0.2s ease-in-out;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+
+
+  input[type="checkbox"] {
+    margin-left: 8px;
+  }
+}
+.datePicker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.archive {
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 4px;
+}

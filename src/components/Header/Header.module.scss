@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3b47c9;
+  color: #fff;
+  font-size: 18px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-shadow: #5599e1;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+
+    .logo {
+      font-size: 18px;
+    }
+
+    button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}
