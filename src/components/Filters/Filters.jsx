@@ -1,5 +1,3 @@
-// Filters.js
-
 import React from "react";
 import RoleFilter from "./RoleFilter";
 import ArchiveFilter from "./ArchiveFilter";

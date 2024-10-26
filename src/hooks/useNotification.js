@@ -5,8 +5,12 @@ export const useNotification = () => {
 
   const showNotification = useCallback((message, type) => {
     setNotification({ message, type });
-    setTimeout(() => setNotification(null), 5000); // автоматическое скрытие
+    setTimeout(() => setNotification(null), 5000); 
   }, []);
 
-  return { notification, showNotification, clearNotification: () => setNotification(null) };
+  return {
+    notification,
+    showNotification,
+    clearNotification: () => setNotification(null),
+  };
 };

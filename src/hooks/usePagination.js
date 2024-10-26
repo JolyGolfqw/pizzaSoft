@@ -1,4 +1,3 @@
-// hooks/usePagination.js
 import { useState, useMemo, useCallback } from "react";
 
 export const usePagination = (items) => {

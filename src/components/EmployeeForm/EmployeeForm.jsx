@@ -32,7 +32,7 @@ const EmployeeForm = ({ employee, onSubmit, showNotification }) => {
           onChange={handleNameChange}
           placeholder="Иван Иванов"
           onFocus={() => handleFocus("name")}
-          onBlur={() => validateField("name")} // Валидация при потере фокуса
+          onBlur={() => validateField("name")}
           required
         />
         {errors.name && <div className={styles.error}>{errors.name}</div>}
@@ -46,7 +46,7 @@ const EmployeeForm = ({ employee, onSubmit, showNotification }) => {
           onChange={handlePhoneChange}
           placeholder="+7 (XXX) XXX-XXXX"
           onFocus={() => handleFocus("phone")}
-          onBlur={() => validateField("phone")} // Валидация при потере фокуса
+          onBlur={() => validateField("phone")} 
         />
         {errors.phone && <div className={styles.error}>{errors.phone}</div>}
       </label>

@@ -2,7 +2,6 @@ import { calculateAge, roleTranslations } from "../../utils/helpers";
 import styles from "./EmployeeCard.module.scss";
 import { Link } from "react-router-dom";
 
-
 const EmployeeCard = ({ employee }) => {
   const translatedRole = roleTranslations[employee.role] || employee.role;
   const age = calculateAge(employee.birthday);

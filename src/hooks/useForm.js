@@ -1,4 +1,3 @@
-// useForm.js
 import { useState, useCallback } from "react";
 import {
   formatPhone,
@@ -17,7 +16,7 @@ export const useForm = (employee = {}, onSubmit, showNotification) => {
         const parsedDate = new Date(
           `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`
         );
-        return isNaN(parsedDate) ? null : parsedDate; // Проверка на валидную дату
+        return isNaN(parsedDate) ? null : parsedDate;
       }
     }
     return null;
@@ -74,7 +73,9 @@ export const useForm = (employee = {}, onSubmit, showNotification) => {
         isArchive,
       });
       showNotification(
-        employee ? "Сотрудник обновлен!" : "Сотрудник добавлен!",
+        Object.keys(employee).length > 0
+          ? "Сотрудник обновлен!"
+          : "Сотрудник добавлен!",
         "success"
       );
     },
@@ -88,7 +89,7 @@ export const useForm = (employee = {}, onSubmit, showNotification) => {
       onSubmit,
       showNotification,
       validateField,
-      employee
+      employee,
     ]
   );
 

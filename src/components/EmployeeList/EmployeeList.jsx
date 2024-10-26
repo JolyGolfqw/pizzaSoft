@@ -7,7 +7,6 @@ import Button from "../Button/Button";
 import { usePagination } from "../../hooks/usePagination";
 
 const EmployeeList = ({ employees, loading, error }) => {
-
   const {
     currentItems: currentEmployees,
     currentPage,
@@ -18,9 +17,9 @@ const EmployeeList = ({ employees, loading, error }) => {
     handlePreviousPage,
   } = usePagination(employees);
 
-
   if (loading) return <Loader />;
-  if (error) return <Error text={"Произошла ошибка при загрузке сотрудников"} />;
+  if (error)
+    return <Error text={"Произошла ошибка при загрузке сотрудников"} />;
 
   return (
     <div className={styles.employeeListContainer}>
@@ -29,7 +28,7 @@ const EmployeeList = ({ employees, loading, error }) => {
           <EmployeeCard key={employee.id} employee={employee} />
         ))}
       </ul>
-      
+
       <div className={styles.pagination}>
         <Button onClick={handlePreviousPage} disabled={!hasPreviousPage}>
           Назад

@@ -1,4 +1,3 @@
-// formHelpers.js
 export const formatPhone = (value) => {
   const cleaned = value.replace(/\D/g, "");
   const match = cleaned.match(/^(\d{1})(\d{3})(\d{3})(\d{4})$/);

@@ -37,7 +37,6 @@ const App = () => {
         </Routes>
       </main>
 
-
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
         <h2>Добавить сотрудника</h2>
         <EmployeeForm

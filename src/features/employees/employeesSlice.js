@@ -36,7 +36,7 @@ const employeesSlice = createSlice({
           birthday:
             typeof action.payload.birthday === "string"
               ? action.payload.birthday
-              : action.payload.birthday.toLocaleDateString("ru-RU"), // Преобразование в строку
+              : action.payload.birthday.toLocaleDateString("ru-RU"), 
         };
         state.employees[index] = updatedEmployee;
       }
