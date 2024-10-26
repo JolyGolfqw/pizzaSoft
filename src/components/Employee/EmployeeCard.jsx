@@ -11,7 +11,7 @@ const EmployeeCard = ({ employee }) => {
       <Link to={`/employee/${employee.id}`}>
         <h2>{employee.name}</h2>
         <p>Должность: {translatedRole}</p>
-        <p>Возраст: {age} лет</p>
+        <p>Возраст: {age}</p>
         <p>Телефон: {employee.phone}</p>
       </Link>
     </div>
