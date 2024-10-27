@@ -22,7 +22,7 @@ const EmployeeDetails = ({ showNotification }) => {
   return (
     <div className={styles.details}>
       <h1 className={styles.title}>Редактирование сотрудника</h1>
-      <Link to="/">Назад</Link>
+      <Link className={styles.goBack} to="/">Назад</Link>
       <EmployeeForm
         employee={employee}
         onSubmit={handleFormSubmit}
