@@ -7,9 +7,12 @@ const EmployeeCard = ({ employee }) => {
   const age = calculateAge(employee.birthday);
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${employee.isArchive ? styles.archived : ''}`}>
       <Link to={`/employee/${employee.id}`}>
-        <h2>{employee.name}</h2>
+        <h2>
+          {employee.name}
+          {employee.isArchive && <span className={styles.archiveLabel}>Архив</span>}
+        </h2>
         <p>Должность: {translatedRole}</p>
         <p>Возраст: {age}</p>
         <p>Телефон: {employee.phone}</p>
